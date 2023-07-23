@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Adjust this if necessary */
+        }
+
+        .centered {
+        /* Add any desired styling for the centered div */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="centered">
+          <!-- Content goes here -->
+          <h3>Enter Your Name: </h3>
+          <input id="name" type="text">
+          <button id="subB">Submit</button>
+        </div>
+    </div>
+    <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+</html>

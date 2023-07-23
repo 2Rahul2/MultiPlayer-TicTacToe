@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+        display: flex;
+        justify-content: center;
+        }
+
+        
+
+        .containerr {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Adjust this if necessary */
+        }
+        .single-line-container {
+        white-space: nowrap;
+        overflow: hidden;
+        }
+
+        .single-line-content {
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        }
+
+
+
+    </style>
+</head>
+<body data-my-data="{{room}}">
+    <div class="container">
+        <div class="centered">
+            <h3 id="username">{{name}}</h3>
+            <div>
+                <button id="host">Host</button>
+            </div>
+          <!-- Content goes here -->
+        </div>
+    </div>
+
+    <div class="containerr">
+        <div class="centered">
+          <!-- Content goes here -->
+          <h2>Rooms</h2>
+          <div class="single-line-container">
+            <div id="appendRoom" class="single-line-content">
+             
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      
+    <script src="{% static 'js/createHost.js' %}"></script>
+      
+      
+</body>
+</html>

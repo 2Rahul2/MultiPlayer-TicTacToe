@@ -1,0 +1,118 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+	width: 330px;
+	overflow: hidden;
+	margin: 50px auto 0 auto;
+}
+
+.container span{
+	display: block;
+	text-align: center;
+	font-family: sans-serif;
+	font-size: 40px;
+	margin-bottom: 40px;
+}
+
+.container .box{
+	float: left;
+	width: 100px;
+	height: 100px;
+	border: 1px solid #000;
+	transition: all .25s ease-in-out;
+	font-size: 85px;
+	text-align: center;
+	line-height: 100px; 
+	cursor: pointer;
+  }
+
+.container .box:hover{
+	background: rgb(174, 244, 255);
+	color: rgb(108, 108, 108);
+}
+
+.btn{
+	width: 200px;
+	font-weight: bold;
+	cursor: pointer;
+	font-size: 15px;
+	display: block;
+	margin: 40px auto;
+	-webkit-box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.75);
+}
+
+.win{
+	background: #48ceff; 
+	color: rgb(0, 94, 255);
+}
+.choose {
+    display: flex;
+  justify-content: center;
+}
+.keys{
+    width: 5rem;
+    height: 5rem;
+    font-size: 3rem;
+    margin: 0.5rem;
+}
+    </style>
+</head>
+<body>
+    <h2>Main Screen</h2>
+
+    <input style="display: none;" id="name" type="text" value="{{name}}">
+    <input style="display: none;" id="roomID" type="text" value="{{id}}">
+    <span style="font-size: 1.5rem;font-weight: bold;" class="choose">Select Your Dice</span>
+    <br>
+    <div id="roles" class="choose">
+        <div id="selectChoice" class="centered">
+          <!-- Content goes here -->
+          <button class="keys" id="Xkey">X</button><button id="Ykey" class="keys">O</button>
+        </div>
+    </div>
+      
+
+    <div class="container" id="main">
+        <span id="turn">Tic Tac Toe</span>
+
+
+        <span id="winmsg" style="font-size: 1.5rem;"></span>
+        <span id="whoseTurn">Your Turn</span>
+
+
+        <button class="box" style="border-left: 0; border-top: 0" id="box1"></button>
+        <button class="box" style="border-top: 0" id="box2"></button>
+        <button class="box" style="border-top: 0; border-right: 0" id="box3"></button>
+        <button class="box" style="border-left: 0" id="box4"></button>
+        <button class="box" id="box5"></button>
+        <button class="box" style="border-right: 0" id="box6"></button>
+        <button class="box" style="border-left: 0; border-bottom: 0" id="box7"></button>
+        <button class="box" style="border-bottom: 0" id="box8"></button>
+        <button class="box" style="border-right: 0; border-bottom: 0" id="box9"></button>
+    
+        <!-- <div class="box" style="border-left: 0; border-top: 0" id="box1"><button id="box1" style="width: 100%; height: 100%;font-size: 100%;"></button></div>
+        <div class="box" style="border-top: 0" id="box2"><button id="box2" style="width: 100%; height: 100%;font-size: 100%;"></button></div>
+        <div class="box" style="border-top: 0; border-right: 0" id="box3"><button id="box3" style="width: 100%; height: 100%;font-size: 100%;"></button></div>
+        <div class="box" style="border-left: 0" id="box4"><button id="box4" style="width: 100%; height: 100%;font-size: 100%;"></button></div>
+        <div class="box" id="box5"><button id="box5" style="width: 100%; height: 100%;font-size: 100%;"></button></div>
+        <div class="box" style="border-right: 0" id="box6"><button id="box6" style="width: 100%; height: 100%;font-size: 100%;"></button></div>
+        <div class="box" style="border-left: 0; border-bottom: 0" id="box7"><button id="box7" style="width: 100%; height: 100%;font-size: 100%;"></button></div>
+        <div class="box" style="border-bottom: 0" id="box8"><button id="box8" style="width: 100%; height: 100%;font-size: 100%;"></button></div>
+        <div class="box" style="border-right: 0; border-bottom: 0" id="box9"><button id="box9" style="width: 100%; height: 100%;font-size: 100%;"></button></div> -->
+      </div>
+      
+      <button class="btn btn-rounded" id="replay">Play Again</button>
+
+
+    <script src="{% static 'js/inside.js' %}"></script>
+    
+</body>
+</html>
